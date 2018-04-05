@@ -8,30 +8,27 @@
 </head>
 <body>
 	<%
-		Random random = Random();
+		Random random = new Random();
 		int randomInt = random.nextInt(3);
-	    
-		 
-	    if (randomInt == 0) {
+		
+		if (randomInt == 0) {
 	%>
-
-	<h1>Random value =<%=randomInt%></h1>
-     
-    <%
-        } else if (randomInt == 1) {
-    %>
-     
-    <h2>Random value =<%=randomInt%></h2>
- 
-    <%
-        } else {
-    %>
-     <h3>Random value =<%=randomInt%></h3>
-    <%
-        }
-    %>
- 
-    <a href="<%= request.getRequestURI() %>">Try Again</a>
-
+		<h1>Random value = <%=randomInt %></h1>	
+		
+	<%	
+		}else if (randomInt == 1) {
+	%>
+	
+		<h2>Random value = <%=randomInt %></h2>	
+	<% 	
+		} else {
+	%>
+		<h3>Random value = <%=randomInt %></h3>	
+	<%
+		}
+	%>
+	
+	<a href="<%=request.getRequestURI() %>">Try again</a>
+	
 </body>
 </html>
